@@ -1,4 +1,4 @@
----
+
 - hosts: all
   tasks:
     - name: download transaction_list
@@ -12,7 +12,7 @@
             dest: /home/ansible/lab-error-handling/transaction_list
         - debug: msg="File downloaded"
 
----
+
 - hosts: all
   tasks:
     - name: download transaction_list
@@ -28,7 +28,7 @@
       rescue:
         - debug: msg="Site appears to be down.  Try again later."
 
----
+
 - hosts: all
   tasks:
     - name: download transaction_list
@@ -46,7 +46,7 @@
       always:
         - debug: msg="Attempt completed."
 
----
+
 - hosts: all
   tasks:
     - name: download transaction_list
